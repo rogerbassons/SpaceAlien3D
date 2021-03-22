@@ -79,3 +79,6 @@ func _input(event):
 	
 	if event is InputEventMouseMotion:
 		mouseDelta = event.relative
+	if Input.is_action_pressed("flashlight"):
+		var spotlight: SpotLight = self.get_node("SpotLight")
+		spotlight.light_energy = 1 if spotlight.light_energy == 0 else 0

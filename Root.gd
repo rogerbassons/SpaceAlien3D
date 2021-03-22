@@ -6,9 +6,7 @@ extends Spatial
 func _ready():
 	OS.window_fullscreen = true
 	
-	var origin = self.get_node("WorldEnvironment/Player").transform.origin
-	origin = origin.move_toward(Vector3(0,-1,0), 1.35)
-	
+
 	var start = Corridor.new(Corridor.FOUREXIT)
 	
 	var startScene = start.getNode()
@@ -16,7 +14,7 @@ func _ready():
 	var direction = Corridor.DOWN
 
 
-	start.setPosition(origin)
+	start.setPosition(Vector3(0,0,0))
 	self.add_child(startScene)
 	
 	var turn = Corridor.new(Corridor.T)
