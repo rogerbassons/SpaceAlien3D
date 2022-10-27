@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://skybox.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
 [ext_resource path="res://Root.gd" type="Script" id=3]
 [ext_resource path="res://terrain.tscn" type="PackedScene" id=4]
+[ext_resource path="res://room.res" type="PackedScene" id=5]
 
 [sub_resource type="PanoramaSky" id=1]
 panorama = ExtResource( 1 )
@@ -47,3 +48,6 @@ far = 1500.0
 
 [node name="terrain" parent="WorldEnvironment" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.62637, 0 )
+
+[node name="Spatial" parent="WorldEnvironment" instance=ExtResource( 5 )]
+transform = Transform( -0.756105, 0, -0.65445, 0, 1, 0, 0.65445, 0, -0.756105, 10.3065, 0.118238, 17.8605 )
